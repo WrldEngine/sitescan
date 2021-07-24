@@ -20,7 +20,7 @@ BY Pulatov Kamran
 '''
 print(backgr)
 func = input('Введите номер: ')
-if func == 1:
+if func == '1':
   q = input('Введите домен>')
   try:
     siteip = socket.gethostbyname(q)
@@ -29,7 +29,7 @@ if func == 1:
     print(GREEN + "Город: "+ response.city+"\nСтрана: "+ response.country+"\nРегион: "+ response.region+"\nШирота: "+ str(response.latitude)+"\nДолгота: "+ str(response.longitude))
   except:
     print('[!] Произошла ошибка. Проверьте правильность дмена или интернета')
-elif func == 2:
+elif func == '2':
   url = input("Введите URL: ")
   print(pyshorteners.Shortener().tinyurl.short(url))
   
